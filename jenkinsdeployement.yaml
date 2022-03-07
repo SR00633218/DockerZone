@@ -2,12 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-   name: "jenkins-deployment"
-   labels: 
-      app: jenkins-master
-      version: "latest"
-      group: "jenkins"
-    namespace: "jenkins"
+  name: "jenkins-deployment"
 spec:
   replicas: 2
   selector:
@@ -17,6 +12,7 @@ spec:
     metadata:
       labels:
         app: jenkins
+        version: "latest"
     spec:
       containers:
         - name: jenkins
