@@ -2,16 +2,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: "jenkins-deployment"
+  name: myapp-deploy
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: jenkins
+      app: myapp
   template:
     metadata:
       labels:
-        app: jenkins
+        app: myapp
         version: "latest"
     spec:
       containers:
